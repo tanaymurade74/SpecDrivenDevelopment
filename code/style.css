@@ -116,3 +116,16 @@ h1 {
     -webkit-box-orient: vertical;  
     overflow: hidden;
 }
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .gallery-item {
+        width: calc(50% - 10px); /* 2 photos per row on tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-item {
+        width: 100%; /* 1 photo per row on small screens */
+    }
+}
