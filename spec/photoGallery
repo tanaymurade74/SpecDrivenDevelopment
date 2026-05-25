@@ -2,7 +2,7 @@
    I want a single page app photoGallery, with the home page displaying the heading as "My Photo Gallery" and about 20 different photos across 4 themes: mountains, beaches, art, music. We need about 20 photos on the home page with 4 photos in each row equally spaced. Upon clicking on any of the photo, i want the pop up appear in the middle of the page with the details encompassing the image, the name of the photograher and the description in about 4 lines with appropriate styling.
 
 2. Effects:
-   Upon hover on any image, it should enlarge in place with enlarged border and solid border color. Upon clicking, as mentioned, I want the image the pop up to appear in the middle in the screen with the image, name of the photographer and the description.
+   Upon hover on any image, it should enlarge in place with enlarged border and solid border color. Upon clicking, as mentioned, I want the image the pop up to appear in the middle in the screen with the image, name of the photographer and the description. As mentioned, I want 20 photos with 4 photos per row on large screens, but we must also make it responsive by having 2 photos per row on tablets and all photos one below the other on mobile screens.
 
 3. Tech Stack:
    I want this to be entirely using HTML and CSS and nothing else, dont use JS, ReactJs or even bootstrap. Entire styling has to be taken care by CSS. Also have separate files for html and the styling using css as clubbing everthing into a single file looks messy. And most important, fetch those 20 photos across those 4 themes from somewhere where the name of the photographer and the descriptoin is readily available, do not write your own description.
