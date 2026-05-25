@@ -1,0 +1,118 @@
+* { box-sizing: border-box; }
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+}
+.gallery-item {
+    width: calc(25% - 15px); /* 4 photos per row */
+    display: block;
+    text-decoration: none;
+    aspect-ratio: 4/3;
+    position: relative;
+    overflow: visible;
+}
+.img-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 4px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+.gallery-item:hover {
+    z-index: 10;
+}
+.gallery-item:hover .img-container {
+    transform: scale(1.1);
+    border: 4px solid #3498db; /* Solid border color as required */
+}
+
+/* Modal Popup Styling */
+.modal {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+.modal:target {
+    opacity: 1;
+    visibility: visible;
+}
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+.close-btn:hover {
+    color: #e74c3c;
+}
+.modal-img {
+    width: 100%;
+    max-height: 50vh;
+    object-fit: contain;
+    background-color: #eee;
+    border-radius: 5px;
+}
+.modal-details {
+    text-align: left;
+}
+.modal-details h3 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+}
+.modal-details p {
+    margin: 0;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
