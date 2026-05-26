@@ -1,11 +1,23 @@
 1. Objective:
-   I want a single page app photoGallery, with the home page displaying the heading as "My Photo Gallery" and about 20 different photos across 4 themes: mountains, beaches, art, music. We need about 20 photos on the home page with 4 photos in each row equally spaced. Upon clicking on any of the photo, i want the pop up appear in the middle of the page with the details encompassing the image, the name of the photograher and the description in about 4 lines with appropriate styling.
+   I want a single page app photoGallery, with the home page displaying the heading as "My Photo Gallery" and about 20 different photos across 4 themes: mountains, beaches, art, music. We need about 20 photos on the home page with 4 photos in each row equally spaced. Upon clicking on any of the photo, I want the lightbox to appear in the middle of the page with the details encompassing the image, the name of the photographer and the description in about 4 lines with appropriate styling. And most important, fetch those 20 photos across those 4 themes from somewhere where the name of the photographer and the description is readily available, do not write your own description.
 
 2. Effects:
-   Upon hover on any image, it should enlarge in place with enlarged border and solid border color. Upon clicking, as mentioned, I want the image the pop up to appear in the middle in the screen with the image, name of the photographer and the description. As mentioned, I want 20 photos with 4 photos per row on large screens, but we must also make it responsive by having 2 photos per row on tablets and all photos one below the other on mobile screens.
+   Upon hover on any image, it should enlarge in place with enlarged border and solid border color. Upon clicking, as mentioned, I want the lightbox to appear in the middle of the screen with the image, name of the photographer and the description. As mentioned, I want 20 photos with 4 photos per row on large screens, but we must also make it responsive by having 2 photos per row on tablets and all photos one below the other on mobile screens.
 
-3. Tech Stack:
-   I want this to be entirely using HTML and CSS and nothing else, dont use JS, ReactJs or even bootstrap. Entire styling has to be taken care by CSS. Also have separate files for html and the styling using css as clubbing everthing into a single file looks messy. And most important, fetch those 20 photos across those 4 themes from somewhere where the name of the photographer and the descriptoin is readily available, do not write your own description.
+3. OnClick:
+   Upon clicking on any photo:
+   - I want a lightbox open centred on the screen displaying the image, the photographer's name in bold and italics, and the image description as fetched from the source in about 2-3 lines. The rest of the background is dimmed with a semi-transparent dark overlay.
+   - A "Next" -> arrow on the right side advances to the next photo in the grid and a "Previous" <- arrow on the left moves to the previous photo in the grid. This loop must run infinitely i.e. the "Next" arrow on the 20th image must lead back to the 1st image and the "Previous" arrow on the 1st image must lead to the 20th image.
+   - A close (X) button is also required in the top right corner of the lightbox to allow the user to close it. Along with this, clicking anywhere in the dimmed background must also replicate similar behaviour.
 
-4. Testing:
-   Upon completing run the app and display the link in the terminal for local testing.
+4. Tech Stack:
+   I want this to be entirely using HTML, CSS and Vanilla JS. Don't use any other library like ReactJs, Bootstrap. Entire styling has to be taken care of by CSS. Also have separate files for HTML (index.html), CSS (style.css) & JS (script.js) as clubbing everything into a single file looks messy.
+
+5. Testing:
+   Run the app locally and verify the following:
+   - Heading "My Photo Gallery" and 20 photos are visible.
+   - Layout switches to 4, 2, 1 images per row depending upon screen size.
+   - Upon hover on any image, it enlarges in place with visible border.
+   - Upon clicking on any image, it opens a lightbox with dimmed background, with the image, photographer name in bold and italics, and the image description.
+   - Upon clicking on the "Next" -> button repeatedly in the lightbox we advance to the 20th placed image and then back to the first placed image. Likewise for the "Previous" <- button we go from 20th image to the first and back to the 20th placed image.
+   - Upon clicking anywhere in the dim background or the X button in the lightbox, we are able to close the lightbox.

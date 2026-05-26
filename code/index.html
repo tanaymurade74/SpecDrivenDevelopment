@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Photo Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>My Photo Gallery</h1>
+    
+    <div class="gallery" id="gallery">
+        <!-- Rendered by JS -->
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn" onclick="closeLightbox(event)">&times;</span>
+        
+        <button class="nav-btn prev-btn" onclick="prevImage(event)">&#10094;</button>
+        
+        <div class="lightbox-content">
+            <div class="lightbox-img-container">
+                <img id="lightbox-img" src="" alt="Gallery Image">
+            </div>
+            <div class="lightbox-details">
+                <h3 id="lightbox-author"></h3>
+                <p id="lightbox-desc"></p>
+            </div>
+        </div>
+        
+        <button class="nav-btn next-btn" onclick="nextImage(event)">&#10095;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
